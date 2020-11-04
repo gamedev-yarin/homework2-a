@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ *  this component enable and disable the SpriteRenderer component with left mouse click.
+ */
+[RequireComponent(typeof(SpriteRenderer))]
 public class HideUnhide : MonoBehaviour
 {
 

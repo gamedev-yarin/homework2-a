@@ -30,7 +30,7 @@ public class Oscillator : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        float tSpeed = Speed/100;
+        float tSpeed = Speed/100; //  Decreases the number speed
         x += tSpeed;
         if (!upAndDown) transform.position = startPos + new Vector3(Mathf.Sin(x) * MaximumDistance, 0f, 0f);
         else transform.position = startPos + new Vector3(0f, Mathf.Sin(x) * MaximumDistance, 0);

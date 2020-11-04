@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  This component rotates the object
+ */
+
 public class Rotator : MonoBehaviour
 {
     [SerializeField]

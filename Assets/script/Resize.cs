@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ *  this component increase and decrease the size of the object.
+ */
+
 public class Resize : MonoBehaviour
 {
     [SerializeField]
@@ -34,25 +38,25 @@ public class Resize : MonoBehaviour
     {
         Vector3 size = transform.localScale;
         float tSpeed = Speed / 100;
-        if (increase)
+        if (increase) //increase
         {
             transform.localScale += new Vector3(tSpeed, tSpeed, 0f);
         }
-        else
+        else //decrease
         {
             transform.localScale -= new Vector3(tSpeed, tSpeed, 0f);
         }
-        if (compareX && !compareY)
+        if (compareX && !compareY) // Checks the x-axis and not the y-axis
         {
             if (size.x >= maxSize) increase = false;
             if (size.x <= minSize) increase = true;
         }
-        if (!compareX && compareY)
+        if (!compareX && compareY) //Checks the y-axis and not the x-axis
         {
             if (size.y >= maxSize) increase = false;
             if (size.y <= minSize) increase = true;
         }
-        if (compareX && compareY)
+        if (compareX && compareY) //Checks the x-axis and the y-axis
         {
             if (size.x >= maxSize || size.y >= maxSize) increase = false;
             if (size.x <= minSize || size.y <= minSize) increase = true;
